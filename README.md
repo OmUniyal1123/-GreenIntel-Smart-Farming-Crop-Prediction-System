@@ -1,213 +1,633 @@
-🌱 GreenIntel — Smart Farming & Crop Prediction System
-<div align="center">
- Python 
+# 🌱 GreenIntel — Smart Farming & Crop Recommendation System
 
- Flask 
+<p align="center">
+  <img src="static/images/banner.png" alt="GreenIntel Banner" width="100%">
+</p>
 
- scikit-learn 
+<p align="center">
+  <b>AI-Powered Crop Recommendation System using Machine Learning</b><br>
+  Helping farmers make data-driven decisions for higher productivity and sustainable agriculture.
+</p>
 
- License 
+<p align="center">
 
- Accuracy 
-AI-powered crop recommendation system that helps farmers make data-driven decisions using Machine Learning.
-🚀 Live Demo • 📊 Screenshots • 📖 Report Bug • ✨ Request Feature
-</div>
-📌 Table of Contents
-Overview
-Features
-Tech Stack
-ML Model Performance
-Installation
-Usage
-Project Structure
-Supported Crops
-Screenshots
-Roadmap
-Contributing
-License
-Contact
-🎯 Overview
-Agriculture is the backbone of the economy, yet farmers frequently struggle with crop selection based on soil and climate conditions. Choosing the wrong crop leads to reduced yield, wasted resources, and financial loss.
-GreenIntel solves this problem using a Random Forest Machine Learning model trained on agricultural data. By analyzing 7 key parameters — Nitrogen, Phosphorus, Potassium, Temperature, Humidity, pH, and Rainfall — the system predicts the most suitable crop with 99.24% accuracy.
-💡 Empowering farmers with AI-driven insights for smarter, more productive farming.
-✨ Features
-Table
-Feature	Description
-🤖 AI Crop Prediction	Predicts the best crop based on soil & environmental data
-📊 Data Analysis	Visualizes soil and environmental parameter distributions
-🏆 Model Comparison	Benchmarks 5 ML algorithms to find the best performer
-🌐 Web Interface	Clean, responsive Flask app with real-time predictions
-📈 Dashboard	Interactive charts for performance visualization
-⚡ Real-Time	Instant predictions with no latency
-🛠️ Tech Stack
-Frontend
- HTML5 
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
+![Flask](https://img.shields.io/badge/Flask-Web_App-black?logo=flask)
+![Scikit-Learn](https://img.shields.io/badge/scikit--learn-Machine_Learning-orange?logo=scikitlearn)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Accuracy](https://img.shields.io/badge/Accuracy-99.24%25-success)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
- CSS3 
+</p>
 
- JavaScript 
+---
 
- Bootstrap 
-Backend & ML
- Python 
+# 📖 Table of Contents
 
- Flask 
+* Overview
+* Problem Statement
+* Features
+* System Architecture
+* Technology Stack
+* Dataset
+* Machine Learning Pipeline
+* Model Performance
+* Installation
+* Usage
+* API Routes
+* Project Structure
+* Supported Crops
+* Exploratory Data Analysis
+* Screenshots
+* Future Roadmap
+* Contributing
+* License
+* Author
+* Acknowledgements
 
- scikit-learn 
+---
 
- Pandas 
+# 🎯 Overview
 
- NumPy 
+Agriculture plays a vital role in the economy, yet many farmers still rely on traditional methods when selecting crops. Choosing an unsuitable crop for a particular soil and climate condition often results in reduced productivity, unnecessary fertilizer usage, and financial losses.
 
- Matplotlib 
+**GreenIntel** is an AI-powered Crop Recommendation System that uses Machine Learning to recommend the most suitable crop based on soil nutrients and environmental conditions.
 
- Seaborn 
-🧠 ML Model Performance
-The project evaluates 5 supervised learning algorithms on the crop recommendation dataset (660 samples, 22 crop classes):
-Table
-Rank	Algorithm	Accuracy
-🥉	Logistic Regression	95.15%
-🥈	SVM	96.36%
-🥉	KNN	97.72%
-🥈	Decision Tree	98.63%
-🥇	Random Forest	99.24% ✅
-Cross-Validation Accuracy: 99.40%
-Classification Report (Random Forest)
-Table
-Crop	Precision	Recall	F1-Score	Support
-Apple	1.00	1.00	1.00	34
-Banana	1.00	1.00	1.00	26
-Blackgram	1.00	1.00	1.00	26
-Chickpea	1.00	1.00	1.00	34
-Coconut	1.00	1.00	1.00	33
-Coffee	1.00	1.00	1.00	30
-Cotton	1.00	1.00	1.00	28
-Grapes	1.00	1.00	1.00	23
-Jute	0.87	1.00	0.93	34
-Kidneybeans	1.00	1.00	1.00	36
-Lentil	1.00	1.00	1.00	22
-Maize	1.00	1.00	1.00	26
-Mango	1.00	1.00	1.00	32
-Mothbeans	1.00	1.00	1.00	34
-Mungbean	1.00	1.00	1.00	30
-Muskmelon	1.00	1.00	1.00	24
-Orange	1.00	1.00	1.00	25
-Papaya	1.00	1.00	1.00	37
-Pigeonpeas	1.00	1.00	1.00	37
-Pomegranate	1.00	1.00	1.00	38
-Rice	1.00	0.82	0.90	28
-Watermelon	1.00	1.00	1.00	23
-Overall: Accuracy = 0.99 | Macro Avg F1 = 0.99 | Weighted Avg F1 = 0.99
-🚀 Installation
-Prerequisites
-Python 3.9+
-pip
-1. Clone the Repository
-bash
+The system analyzes:
+
+* Nitrogen (N)
+* Phosphorus (P)
+* Potassium (K)
+* Temperature
+* Humidity
+* pH
+* Rainfall
+
+Using these parameters, GreenIntel predicts the best crop with **99.24% testing accuracy** using the **Random Forest Classifier**.
+
+---
+
+# ❗ Problem Statement
+
+Farmers often face difficulties selecting the most suitable crop because of changing climate conditions and varying soil characteristics.
+
+Traditional decision-making may lead to:
+
+* Poor crop yield
+* Excessive fertilizer usage
+* Water wastage
+* Financial loss
+* Reduced agricultural productivity
+
+GreenIntel aims to solve this problem using Artificial Intelligence and Machine Learning.
+
+---
+
+# ✨ Features
+
+| Feature               | Description                               |
+| --------------------- | ----------------------------------------- |
+| 🌱 AI Crop Prediction | Predicts the most suitable crop using ML  |
+| 📊 Data Analysis      | Visualizes soil and weather distributions |
+| 📈 Dashboard          | Displays model comparison and insights    |
+| ⚡ Instant Prediction  | Real-time prediction using Flask          |
+| 🧠 Machine Learning   | Random Forest based prediction            |
+| 📉 Model Comparison   | Compare 5 supervised algorithms           |
+| 💻 Responsive UI      | User-friendly web interface               |
+| 📂 Modular Code       | Easy to understand project structure      |
+
+---
+
+# 🏗️ System Architecture
+
+```text
+                    Farmer
+
+                       │
+
+                       ▼
+
+             Enter Soil Parameters
+
+                       │
+
+                       ▼
+
+              Flask Web Application
+
+                       │
+
+                       ▼
+
+        Data Preprocessing & Validation
+
+                       │
+
+                       ▼
+
+       Random Forest Prediction Model
+
+                       │
+
+                       ▼
+
+         Recommended Crop Displayed
+```
+
+---
+
+# 🛠 Technology Stack
+
+## Frontend
+
+* HTML5
+* CSS3
+* JavaScript
+* Bootstrap
+
+## Backend
+
+* Python
+* Flask
+
+## Machine Learning
+
+* Scikit-learn
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+
+## Tools
+
+* VS Code
+* Jupyter Notebook
+* Git
+* GitHub
+
+---
+
+# 📊 Dataset
+
+**Dataset Name**
+
+Crop Recommendation Dataset
+
+**Source**
+
+Agricultural Dataset (Kaggle)
+
+## Dataset Statistics
+
+| Property        | Value     |
+| --------------- | --------- |
+| Samples         | 2200      |
+| Features        | 7         |
+| Crop Classes    | 22        |
+| Target Variable | Crop Name |
+
+### Input Features
+
+* Nitrogen
+* Phosphorus
+* Potassium
+* Temperature
+* Humidity
+* pH
+* Rainfall
+
+---
+
+# 🤖 Machine Learning Pipeline
+
+```text
+Data Collection
+
+↓
+
+Data Cleaning
+
+↓
+
+Exploratory Data Analysis
+
+↓
+
+Train-Test Split
+
+↓
+
+Feature Engineering
+
+↓
+
+Model Training
+
+↓
+
+Hyperparameter Tuning
+
+↓
+
+Cross Validation
+
+↓
+
+Model Evaluation
+
+↓
+
+Save Model (.pkl)
+
+↓
+
+Flask Deployment
+```
+
+---
+
+# 🧠 Algorithms Compared
+
+| Algorithm              | Accuracy     |
+| ---------------------- | ------------ |
+| Logistic Regression    | 95.15%       |
+| Support Vector Machine | 96.36%       |
+| K-Nearest Neighbors    | 97.72%       |
+| Decision Tree          | 98.63%       |
+| **Random Forest**      | **99.24%** ✅ |
+
+---
+
+# 🏆 Why Random Forest?
+
+Random Forest achieved the highest accuracy because:
+
+* Handles nonlinear relationships efficiently.
+* Reduces overfitting using ensemble learning.
+* Performs well with mixed numerical features.
+* Robust against noisy data.
+* Requires minimal preprocessing.
+* Produces stable predictions.
+
+---
+
+# 📈 Model Performance
+
+## Testing Accuracy
+
+**99.24%**
+
+## Cross Validation Accuracy
+
+**99.40%**
+
+## Precision
+
+99%
+
+## Recall
+
+99%
+
+## F1 Score
+
+99%
+
+---
+
+# 📋 Classification Report (Summary)
+
+| Metric    | Score |
+| --------- | ----- |
+| Accuracy  | 0.99  |
+| Precision | 0.99  |
+| Recall    | 0.99  |
+| F1 Score  | 0.99  |
+
+Most crop classes achieved perfect precision and recall.
+
+---
+
+# 📊 Confusion Matrix
+
+Add your confusion matrix screenshot here.
+
+```text
+images/confusion_matrix.png
+```
+
+---
+
+# 📈 Exploratory Data Analysis
+
+The project includes multiple visualizations:
+
+* Feature Distribution
+* Correlation Heatmap
+* Crop Distribution
+* Pair Plot
+* Box Plot
+* Histogram
+* Scatter Plot
+
+Place screenshots inside:
+
+```text
+static/images/
+```
+
+---
+
+# 🚀 Installation
+
+## Clone Repository
+
+```bash
 git clone https://github.com/YOUR_USERNAME/GreenIntel-Smart-Farming.git
+```
+
+```bash
 cd GreenIntel-Smart-Farming
-2. Create Virtual Environment (Recommended)
-bash
+```
+
+---
+
+## Create Virtual Environment
+
+Windows
+
+```bash
 python -m venv venv
 
-# Windows
 venv\Scripts\activate
+```
 
-# macOS/Linux
+Linux/macOS
+
+```bash
+python3 -m venv venv
+
 source venv/bin/activate
-3. Install Dependencies
-bash
+```
+
+---
+
+## Install Dependencies
+
+```bash
 pip install -r requirements.txt
-4. Run the Application
-bash
+```
+
+---
+
+## Run Application
+
+```bash
 python app.py
-5. Open in Browser
-Navigate to: http://127.0.0.1:5000
-📖 Usage
-Home Page — Learn about the system and navigate to prediction.
-Predict Page — Enter your soil and environmental values:
-Nitrogen (N) content
-Phosphorus (P) content
-Potassium (K) content
-Temperature (°C)
-Humidity (%)
-pH level
-Rainfall (mm)
-Get Prediction — The Random Forest model instantly recommends the most suitable crop.
-Analysis Dashboard — View model performance, comparisons, and agricultural insights.
-📂 Project Structure
-plain
-GreenIntel-Smart-Farming/
-│
-├── static/                 # CSS, JS, Images
-│   ├── css/
-│   ├── js/
-│   └── images/
-│
-├── templates/              # HTML Templates
-│   ├── index.html          # Home Page
-│   ├── predict.html        # Prediction Form
-│   ├── analysis.html       # Data Analysis
-│   ├── supervised.html     # Model Comparison
-│   └── dashboard.html      # Performance Dashboard
-│
-├── dataset/
-│   └── crop_dataset.csv    # Training Data
-│
-├── model/
-│   └── crop_model.pkl      # Trained Random Forest Model
-│
-├── app.py                  # Flask Application
-├── train_model.py          # Model Training Script
-├── requirements.txt        # Python Dependencies
-└── README.md               # Project Documentation
-🌾 Supported Crops
-The system can predict 22 different crops:
-Table
-🍚 Rice	🌽 Maize	🍌 Banana	🥭 Mango
-🧶 Cotton	☕ Coffee	🥥 Coconut	🍎 Apple
-🍊 Orange	🍈 Papaya	🍉 Watermelon	🍇 Grapes
-🫘 Chickpea	🫘 Lentil	🫘 Kidney Beans	🫘 Pigeonpeas
-🫘 Blackgram	🫘 Mungbean	🫘 Mothbeans	🌿 Jute
-🍈 Muskmelon	🍎 Pomegranate		
-📸 System Screenshots
-🏠 Home Page
-🌾 Crop Prediction
+```
 
-📊 Analysis Dashboard
-📈 MSP Graphs
+---
 
-🛣️ Roadmap
-[x] Core crop prediction with Random Forest
-[x] Web interface with Flask
-[x] Model comparison dashboard
-[ ] 🌦️ Weather API Integration
-[ ] 🌱 Fertilizer Recommendation System
-[ ] 📱 Mobile Application (React Native / Flutter)
-[ ] ☁️ Cloud Deployment (AWS / Render / Heroku)
-[ ] 🌍 Multi-language Support
-[ ] 📷 Plant Disease Detection (CNN / Deep Learning)
-[ ] 📡 IoT Sensor Integration
-🤝 Contributing
-Contributions are welcome! If you'd like to improve GreenIntel:
-Fork the repository
-Create a feature branch (git checkout -b feature/AmazingFeature)
-Commit your changes (git commit -m 'Add some AmazingFeature')
-Push to the branch (git push origin feature/AmazingFeature)
-Open a Pull Request
-Please ensure your code follows the existing style and includes appropriate tests.
-📄 License
-This project is licensed under the MIT License — feel free to use, modify, and distribute for educational and research purposes.
-See LICENSE for more details.
-👨‍💻 Author
-Om Uniyal
-MCA (AI & Data Science) Student
-Machine Learning & Web Development Enthusiast
-mailto:omuniyal0@gmail.com
-https://github.com/YOUR_USERNAME
-⭐ Support
-If you found this project useful, please consider giving it a ⭐ on GitHub!
-Your support helps keep the project alive and motivates future enhancements.
-<div align="center">
-Made with ❤️ for smarter farming
-</div>
+## Open Browser
+
+```
+http://127.0.0.1:5000
+```
+
+---
+
+# 📖 Usage
+
+### Home Page
+
+Introduction to GreenIntel.
+
+### Predict Crop
+
+Enter
+
+* Nitrogen
+* Phosphorus
+* Potassium
+* Temperature
+* Humidity
+* pH
+* Rainfall
+
+Click **Predict**.
+
+The Random Forest model instantly recommends the most suitable crop.
+
+---
+
+# 🌐 API Routes
+
+| Route       | Description      |
+| ----------- | ---------------- |
+| /           | Home Page        |
+| /predict    | Crop Prediction  |
+| /analysis   | Data Analysis    |
+| /dashboard  | Dashboard        |
+| /supervised | Model Comparison |
+
+---
+
+# 📂 Project Structure
+
+```text
+GreenIntel-Smart-Farming
+│
+├── dataset
+│   └── crop_dataset.csv
+│
+├── model
+│   └── crop_model.pkl
+│
+├── static
+│   ├── css
+│   ├── js
+│   ├── images
+│
+├── templates
+│   ├── index.html
+│   ├── predict.html
+│   ├── analysis.html
+│   ├── dashboard.html
+│   └── supervised.html
+│
+├── app.py
+├── train_model.py
+├── requirements.txt
+├── README.md
+└── LICENSE
+```
+
+---
+
+# 🌾 Supported Crops
+
+* Rice
+* Maize
+* Chickpea
+* Kidney Beans
+* Pigeon Peas
+* Moth Beans
+* Mung Bean
+* Black Gram
+* Lentil
+* Pomegranate
+* Banana
+* Mango
+* Grapes
+* Watermelon
+* Muskmelon
+* Apple
+* Orange
+* Papaya
+* Coconut
+* Cotton
+* Jute
+* Coffee
+
+---
+
+# 📸 Screenshots
+
+## Home Page
+
+```
+static/images/home.png
+```
+
+---
+
+## Prediction Page
+
+```
+static/images/predict.png
+```
+
+---
+
+## Dashboard
+
+```
+static/images/dashboard.png
+```
+
+---
+
+## Model Comparison
+
+```
+static/images/model_comparison.png
+```
+
+---
+
+## Confusion Matrix
+
+```
+static/images/confusion_matrix.png
+```
+
+---
+
+# 📌 Future Roadmap
+
+* ✅ Crop Recommendation
+* ✅ Flask Web Application
+* ✅ Dashboard
+* ✅ Model Comparison
+
+Upcoming Features
+
+* Weather API Integration
+* Fertilizer Recommendation
+* CNN-based Plant Disease Detection
+* Multi-language Support
+* Android Application
+* Cloud Deployment (AWS/Render)
+* IoT Sensor Integration
+* Voice Assistant for Farmers
+* Satellite Image Analysis
+* Yield Prediction
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome.
+
+1. Fork the repository.
+2. Create a new feature branch.
+
+```bash
+git checkout -b feature/new-feature
+```
+
+3. Commit changes.
+
+```bash
+git commit -m "Added new feature"
+```
+
+4. Push changes.
+
+```bash
+git push origin feature/new-feature
+```
+
+5. Open a Pull Request.
+
+---
+
+# 📄 License
+
+This project is licensed under the **MIT License**.
+
+Feel free to use this project for educational and research purposes.
+
+---
+
+# 👨‍💻 Author
+
+**Om Uniyal**
+
+🎓 MCA (AI & Data Science)
+
+🏫 Graphic Era Hill University, Dehradun
+
+💻 Machine Learning | Python | Flask | Data Science
+
+📧 Email: [omuniyal0@gmail.com](mailto:omuniyal0@gmail.com)
+
+🐙 GitHub: https://github.com/YOUR_USERNAME
+
+💼 LinkedIn: https://linkedin.com/in/YOUR_USERNAME
+
+---
+
+# 🙏 Acknowledgements
+
+* Kaggle Crop Recommendation Dataset
+* Scikit-learn Documentation
+* Flask Documentation
+* Python Community
+* Open Source Contributors
+
+---
+
+# ⭐ Support
+
+If you found this project useful, please consider giving it a **⭐ Star** on GitHub.
+
+Your support motivates future development and improvements.
+
+---
+
+<p align="center">
+
+**🌱 Made with ❤️ for Smarter Farming and Sustainable Agriculture 🌾**
+
+</p>
