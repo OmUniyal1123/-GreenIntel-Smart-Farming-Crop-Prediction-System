@@ -232,10 +232,21 @@ The system can predict **22 different crops**:
 ## 📸 System Screenshots
 
 ### 🏠 Home Page
+<img width="1902" height="883" alt="image" src="https://github.com/user-attachments/assets/d3dcf917-4402-41aa-83ba-cba210ae7d80" />
+
 *🌾 Crop Prediction*
+<img width="1895" height="867" alt="image" src="https://github.com/user-attachments/assets/790b5677-fa2a-47d2-8c4a-97fd0da80f7a" />
+<img width="1618" height="811" alt="image" src="https://github.com/user-attachments/assets/3b87acee-2353-47d3-bcf6-3e334eae94bf" />
 
 ### 📊 Analysis Dashboard
+<img width="1897" height="952" alt="image" src="https://github.com/user-attachments/assets/5ab4c67b-6be8-47be-a3ab-efd0d2940007" />
+
 *📈 MSP Graphs*
+<img width="1845" height="870" alt="image" src="https://github.com/user-attachments/assets/c0516d05-7753-4200-9c9b-21b9439ac04e" />
+<img width="1687" height="805" alt="image" src="https://github.com/user-attachments/assets/5e46cd8d-58f4-41e8-91a9-12fc79bafdd2" />
+
+
+<img width="1512" height="666" alt="image" src="https://github.com/user-attachments/assets/9fb5fd98-2540-41b1-a071-c8e26e3b6b34" />
 
 ---
 
